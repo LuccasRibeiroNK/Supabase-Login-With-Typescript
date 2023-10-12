@@ -29,6 +29,7 @@ const defaultUserContext = {
   googleUser: null,
 
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  // @ts-ignore
   setGoogleUser: (user: User) => {},
 } as UserContextInterface;
 

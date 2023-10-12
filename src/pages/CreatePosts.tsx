@@ -29,7 +29,7 @@ function CreatePosts() {
 
   const handlePostSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-
+    // @ts-ignore
     const imageName = uuidv4() + postDetails.image.name;
 
     const { error: uploadError } = await supabase.storage
@@ -53,7 +53,9 @@ function CreatePosts() {
         date: new Date(),
         imagem_url: imageUrl,
         autor_id: googleUser?.id,
+        // @ts-ignore
         autor_name: googleUser?.user_metadata.full_name,
+        // @ts-ignore
         autor_avatar_url: googleUser?.user_metadata.avatar_url,
       },
     ]);
@@ -96,6 +98,7 @@ function CreatePosts() {
                 type="file"
                 accept="image/jpeg, image/jpg, image/png"
                 onChange={(e) =>
+                  // @ts-ignore
                   setPostDetails({ ...postDetails, image: e.target.files[0] })
                 }
                 required

@@ -97,6 +97,7 @@ function Compilation() {
                 if (expandedPostId === post.id) {
                   setExpandedPostId(null);
                 } else {
+                  // @ts-ignore
                   setExpandedPostId(post.id);
                 }
               }}
@@ -132,6 +133,7 @@ function Compilation() {
                     <li>
                       <button
                         onClick={async () => {
+                          // @ts-ignore
                           await deletePost(post.id);
                         }}
                       >

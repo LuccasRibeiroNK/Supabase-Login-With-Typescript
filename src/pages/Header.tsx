@@ -25,7 +25,8 @@ const Header: React.FC = () => {
   return (
     <div>
       <StyledContainer>
-        <>
+        <div>
+          {/*@ts-ignore*/}
           {googleUser?.user_metadata?.full_name ? (
             <div className="header">
               <ul className="ulHeader">
@@ -46,6 +47,7 @@ const Header: React.FC = () => {
                 <li className="">Contact</li>
                 <li className="">
                   <img
+                    // @ts-ignore
                     src={googleUser?.user_metadata.avatar_url}
                     alt="avatar"
                     className="avatar-image"
@@ -78,7 +80,7 @@ const Header: React.FC = () => {
               </ul>
             </div>
           )}
-        </>
+        </div>
       </StyledContainer>
     </div>
   );

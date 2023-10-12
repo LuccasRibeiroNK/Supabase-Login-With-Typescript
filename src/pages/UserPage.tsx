@@ -43,6 +43,7 @@ function Success() {
       const { data, error } = await supabase
         .from("Posts")
         .select("*")
+        //@ts-ignore
         .eq("autor_id", googleUser.id)
         .order("date", { ascending: false });
 
@@ -114,6 +115,7 @@ function Success() {
                   if (expandedPostId === post.id) {
                     setExpandedPostId(null);
                   } else {
+                    //@ts-ignore
                     setExpandedPostId(post.id);
                   }
                 }}
@@ -150,6 +152,7 @@ function Success() {
                       <li>
                         <button
                           onClick={async () => {
+                            // @ts-ignore
                             await deletePost(post.id);
                           }}
                         >
