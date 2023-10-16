@@ -3,7 +3,7 @@ import { createClient } from "@supabase/supabase-js";
 import { UserContext } from "../context/GoogleUserContext";
 import { useNavigate } from "react-router-dom";
 import { v4 as uuidv4 } from "uuid";
-import { StyledCreatePosts } from "../styles/StyledComponents";
+import { StyledCreatePosts, StyledNotLogged } from "../styles/StyledComponents";
 import LoginPage from "./LoginPage";
 
 interface Post {
@@ -110,13 +110,11 @@ function CreatePosts() {
           </div>
         </div>
       ) : (
-        <>
-          return return (
-          <div>
-            <LoginPage />
+        <StyledNotLogged>
+          <div className="notLogged">
+            <h1>User not logged in.</h1>
           </div>
-          );
-        </>
+        </StyledNotLogged>
       )}
     </StyledCreatePosts>
   );

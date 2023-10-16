@@ -423,3 +423,12 @@ export const StyledCreatePosts = styled.div`
     }
   }
 `;
+
+export const StyledNotLogged = styled.div`
+  .notLogged {
+    margin-top: 15vh;
+    display: flex;
+    justify-content: center;
+    color: black;
+  }
+`;
