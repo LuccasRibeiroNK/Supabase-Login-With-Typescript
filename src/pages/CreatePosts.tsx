@@ -4,7 +4,6 @@ import { UserContext } from "../context/GoogleUserContext";
 import { useNavigate } from "react-router-dom";
 import { v4 as uuidv4 } from "uuid";
 import { StyledCreatePosts, StyledNotLogged } from "../styles/StyledComponents";
-import LoginPage from "./LoginPage";
 
 interface Post {
   title: string;
